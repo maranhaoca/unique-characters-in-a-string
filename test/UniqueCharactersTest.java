@@ -8,7 +8,7 @@ class UniqueCharactersTest {
     void if_has_blank_spaces() {
         String input = "a b c d";
 
-        boolean actual = UniqueCharacters.uniqueCharacters(input);
+        boolean actual = UniqueCharacters.isUniqueCharacters(input);
         boolean expected = true;
 
         assertEquals(expected, actual);

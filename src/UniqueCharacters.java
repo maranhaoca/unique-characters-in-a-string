@@ -15,9 +15,9 @@ public class UniqueCharacters {
         }
     }
 
-    public static boolean uniqueCharacters(String input) {
-        input = input.replaceAll("\\s+", "");
-        char[] array = input.toCharArray();
+    public static boolean isUniqueCharacters(String input) {
+        String inputWithoutBlanks = input.replaceAll("\\s+", "");
+        char[] array = inputWithoutBlanks.toCharArray();
 
         boolean status = true;
 
