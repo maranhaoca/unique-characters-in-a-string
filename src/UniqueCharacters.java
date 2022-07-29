@@ -14,9 +14,9 @@ public class UniqueCharacters {
             System.out.println("It's " + response + ", this string has no unique characters.");
         }
     }
-
+        
     public static boolean isUniqueCharacters(String input) {
-        String inputWithoutBlanks = input.replaceAll("\\s+", "");
+        String inputWithoutBlanks = input.replaceAll("\\s+", "").toLowerCase();        
         char[] array = inputWithoutBlanks.toCharArray();
 
         boolean status = true;
