@@ -1,11 +1,18 @@
-import org.junit.BeforeClass;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class UniqueCharactersTest {
 
+    @Test
+    void if_has_blank_spaces() {
+        String input = "a b c d";
+
+        boolean actual = UniqueCharacters.uniqueCharacters(input);
+        boolean expected = true;
+
+        assertEquals(expected, actual);
+    }
     @Test
     void if_has_unique_characters() {
         String input = "uniqe";

@@ -4,6 +4,7 @@ public class UniqueCharacters {
     }
 
     public static boolean uniqueCharacters(String input) {
+        input = input.replaceAll("\\s+", "");
         char[] array = input.toCharArray();
         boolean status = true;
         for (int i = 0; i < array.length; i++) {
