@@ -1,9 +1,12 @@
+import java.util.Locale;
+
 public class UniqueCharacters {
     public static void main(String[] args) {
         System.out.println(uniqueCharacters("caio"));
     }
 
     public static boolean uniqueCharacters(String input) {
+        input = input.toLowerCase();
         char[] array = input.toCharArray();
         boolean status = true;
         for (int i = 0; i < array.length; i++) {
