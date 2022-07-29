@@ -1,14 +1,26 @@
-import java.util.Locale;
+import java.util.Scanner;
 
 public class UniqueCharacters {
     public static void main(String[] args) {
-        System.out.println(uniqueCharacters("caio"));
-    }
+        System.out.println("Welcome to UniqueCharacters!!\nEnter a string!!");
 
-    public static boolean uniqueCharacters(String input) {
-        input = input.toLowerCase();
-        char[] array = input.toCharArray();
+        Scanner input = new Scanner(System.in);
+        String userInput = input.next();
+
+        boolean response = isUniqueCharacters(userInput);
+        if (response) {
+            System.out.println("It's " + response + ", this string has unique characters.");
+        } else {
+            System.out.println("It's " + response + ", this string has no unique characters.");
+        }
+    }
+        
+    public static boolean isUniqueCharacters(String input) {
+        String inputWithoutBlanks = input.replaceAll("\\s+", "").toLowerCase();        
+        char[] array = inputWithoutBlanks.toCharArray();
+
         boolean status = true;
+
         for (int i = 0; i < array.length; i++) {
             if(status) {
                 for (int k = i + 1; k < array.length; k++) {
