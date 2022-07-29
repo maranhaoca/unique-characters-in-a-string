@@ -1,10 +1,19 @@
+import java.util.Scanner;
+
 public class UniqueCharacters {
     public static void main(String[] args) {
-        System.out.println(uniqueCharacters("caio"));
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to UniqueCharacters!!\nEnter a string!!");
+        String userInput = input.next();
+        if (uniqueCharacters(userInput)) {
+            System.out.println("It's " + uniqueCharacters(userInput) + ", this string has unique characters.");
+        } else {
+            System.out.println("It's " + uniqueCharacters(userInput) + ", this string has no unique characters.");
+        }
     }
 
-    public static boolean uniqueCharacters(String input) {
-        char[] array = input.toCharArray();
+    public static boolean uniqueCharacters(String userInput) {
+        char[] array = userInput.toCharArray();
         boolean status = true;
         for (int i = 0; i < array.length; i++) {
             if(status) {
