@@ -17,7 +17,7 @@ class UniqueCharactersTest {
     void if_has_unique_characters() {
         String input = "uniqe";
 
-        boolean actual = UniqueCharacters.uniqueCharacters(input);
+        boolean actual = UniqueCharacters.isUniqueCharacters(input);
         boolean expected = true;
 
         assertEquals(expected, actual);
@@ -27,7 +27,7 @@ class UniqueCharactersTest {
     void if_has_no_unique_characters() {
         String input = "nouniquecharacters";
 
-        boolean actual = UniqueCharacters.uniqueCharacters(input);
+        boolean actual = UniqueCharacters.isUniqueCharacters(input);
         boolean expected = false;
 
         assertEquals(expected, actual);
